@@ -40,33 +40,3 @@
 .read-the-docs {
   color: #888;
 }
-
-
-
-.title, span{
-  cursor:pointer
-}
-.accordion{
-  margin:  auto;
-  width: 20em;
-  height:contain;
-  background-color:#fff;
-  border-radius: 10px;
-}
-button{
-  color: #fff;
-  width: inherit;
-  background-color: transparent;
-  border-radius: 2px;
-  font-size: 14px;
-}
-span{
-  font: 15px;
-}
-h3{
-  margin-top:10px;
-}
-.item{
-  background-color:#614101;
-  color:#fff;
-}

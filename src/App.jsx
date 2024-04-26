@@ -1,14 +1,15 @@
 import './App.css'
-import data from "./data"
-import {  useState  } from "react";
+import ImageSlider from "./index"
+// import data from "./data"
+// import {  useState  } from "react";
 
 function App() {
   
   
   return (
     <>
-      <div className='accordion'>
-       
+      <div>
+       <ImageSlider url = {"https://picsum.photos/v2/list"}/>
       </div>
     </>
   )
