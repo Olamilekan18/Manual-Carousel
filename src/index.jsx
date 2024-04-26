@@ -1,6 +1,9 @@
 import { useState } from "react"
 import { useEffect } from "react"
 import {BsArrowLeftCircleFill, BsArrowRightCircleFill} from "react-icons/bs"
+import './App.css'
+import './index.css'
+
 
 
 
