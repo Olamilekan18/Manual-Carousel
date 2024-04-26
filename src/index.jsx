@@ -4,20 +4,20 @@ import {BsArrowLeftCircleFill, BsArrowRightCircleFill} from "react-icons/bs"
 
 
 
-export default function ImageSlider({url, limit =10, page=1}){
+export default function ImageSlider({url, limit , page}){
     const [images, setImages] = useState([])
-    const [currentSlide, setCurrentSlide] = useState(0)
+    // const [currentSlide, setCurrentSlide] = useState(0)X
     const[errorMsg, setErrorMsg] = useState(null)
     const[loading, setLoading] = useState(false)
-
-    async function getImages(getUrl){
+// get and fetch images
+    async function fetchImages(getUrl){
         try{
             setLoading(true)
-            const response = await fetch(`{getUrl}?page=${page}&limit=${limit}`)
+            const response = await fetch(`${getUrl}?page=1&limit=5`)
             const data = await response.json()
             
             if(data){
-                getImages(data)
+                setImages(data)
                 setLoading(false)
             }
         }
@@ -55,9 +55,14 @@ export default function ImageSlider({url, limit =10, page=1}){
             :null
         }
         <BsArrowRightCircleFill className="arrow arrow-right"/>
-        <span className="cirle-indicators">{
-            images&&images.length
-        }
-        </span>
+        <span className="cirle-indicators">
+            {
+            images&&images.length ?
+            images.map((_,index)=>
+            <button
+            key={index}
+            className="current-indicator"
+            ></button>) :null
+            } </span>
     </div>
 }
