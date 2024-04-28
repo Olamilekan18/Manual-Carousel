@@ -29,7 +29,6 @@ export default function ImageSlider({url, limit , page}){
         }
     }
     function handlePrevious(){
-        console.log("zcjsjd");
         setCurrentSlide(currentSlide === 0? images.length-1 : currentSlide-1)
     }
     function handleNext(){
